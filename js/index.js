@@ -32,4 +32,17 @@ const trianglePerimeter = () => {
     }
 }
 
-console.log(trianglePerimeter());
+// console.log(trianglePerimeter());
+
+
+
+// Challenge # 3 - Clock
+
+const clock = (h, m) => {
+    const HOURS_IN_SECONDS = 3600;
+    const MINUTES_IN_SECONDS = 60;
+    const result = (h * HOURS_IN_SECONDS) + (MINUTES_IN_SECONDS * m);
+
+    return `In 32 hours and 20 minutes there is ${result} seconds`
+}
+console.log(clock(32, 20));
