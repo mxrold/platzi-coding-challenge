@@ -1,10 +1,10 @@
-// Challenge #1 - Print Hello World
+// ------------------------------------------------------- Challenge #1 - Print Hello World
 const greeting = 'Hello World';
 
 console.log(greeting);
 
 
-// Challenge #2 - Triangle area and perimeter
+//  ------------------------------------------------------- Challenge #2 - Triangle area and perimeter
 const triangleArea = () => {
     const base = parseFloat(prompt('Enter base value'));
     const height = parseFloat(prompt('Enter height value'));
@@ -36,7 +36,7 @@ const trianglePerimeter = () => {
 
 
 
-// Challenge # 3 - Clock
+// ------------------------------------------------------- Challenge # 3 - Clock
 
 const clock = (h, m) => {
     const HOURS_IN_SECONDS = 3600;
@@ -45,4 +45,21 @@ const clock = (h, m) => {
 
     return `In 32 hours and 20 minutes there is ${result} seconds`
 }
-console.log(clock(32, 20));
+// console.log(clock(32, 20));
+
+
+
+// ------------------------------------------------------- Challenge #4 - Repeat the word
+const repeatWord = () => {
+    let askString = prompt('Enter a word');
+    let askRepeatString = parseInt(prompt('Enter a number for repeat your word'));
+
+    for(let i = 0; i < askRepeatString; i++) {
+        console.log(askString);
+    }
+}
+// repeatWord();
+
+
+
+// ------------------------------------------------------- Challenge #5 - We need vowels?
