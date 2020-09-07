@@ -99,3 +99,43 @@ const calculator = () => {
     }
 }
 // calculator()
+
+
+
+// ------------------------------------------------------- Challenge #7 - Rock, paper or scissors
+const gameComputer = () => {
+    let numberRandom = (Math.random() * 10).toFixed(2);
+    if(numberRandom < 3.33) {
+        return "Rock";
+    }
+    else if (numberRandom > 3.33 && numberRandom < 6.66) {
+        return "Paper";
+    }
+    else {
+        return "Scissors";
+    }
+}
+
+const gamePlayer = () => {
+    const askForPlay = prompt('For to play: Enter "rock", "paper" or "scissors"');
+    const validate = askForPlay.charAt(0).toUpperCase() + askForPlay.slice(1);
+    return validate;
+}
+
+const winner = () => {
+    let computer = gameComputer();
+    let player = gamePlayer();
+
+    if (player !== computer) {
+        return (`Player: ${player} - Computer: ${computer} | Winner: Computer`);
+    }
+    if (player === 'Rock' && computer === 'Scissors' ||
+             player === 'Paper' && computer === 'Rock' ||
+             player === 'Scissors' && computer === 'Paper') {
+        return(`Player: ${player} - Computer: ${computer} | Winner: Player`);
+    }
+    else {
+        return (`Player: ${player} - Computer: ${computer} | Result: Tie`);
+    }
+}
+// console.log(winner())
