@@ -139,3 +139,31 @@ const winner = () => {
     }
 }
 // console.log(winner())
+
+
+
+// ------------------------------------------------------- Challenge #8 - Volume of a cylinder
+const radioOrDiameter = () => {
+    const askUser = prompt('For calculation the cylinder volume, do you use diameter or radio?');
+    const askWhich = parseFloat(prompt('Enter value of the diameter or radio')).toFixed(3);
+
+    if (askUser === 'radio' || askUser === 'Radio' || askUser === 'RADIO') {
+        return (askWhich ** 2);
+    } else {
+        return askWhich;
+    }
+}
+
+const height = () => {
+    const askHeight = parseFloat(prompt('Enter value of the height')).toFixed(3);
+    return askHeight;
+}
+
+const volumeCylinder = () => {
+    const value = radioOrDiameter();
+    const valueHeight = height();
+
+    let result = (`The volume is: ${(Math.PI * value * valueHeight).toFixed(1)} m³`);
+    return result;
+}
+// console.log(volumeCylinder());
