@@ -72,3 +72,30 @@ const takeOutVowels = (str) => {
     return(withOutVowels)
 }
 // console.log(takeOutVowels(paragraph))
+
+
+
+// ------------------------------------------------------- Challenge #6 - Calculator
+const calculator = () => {
+    const number1 = parseFloat(prompt('Enter a number 1'));
+    const operator = prompt('Enter a operator: "+", "-", "/", "*"');
+    const number2 = parseFloat(prompt('Enter a number 2'));
+
+    switch(operator) {
+        case '+': 
+            console.log(`The result of the ${number1} + ${number2} its: ${number1 + number2}`);
+            break
+        case '-': 
+            console.log(`The result of the ${number1} - ${number2} its: ${number1 - number2}`);
+            break
+        case '/': 
+            console.log(`The result of the ${number1} / ${number2} its: ${number1 / number2}`);
+            break
+        case '*': 
+            console.log(`The result of the ${number1} * ${number2} its: ${number1 * number2}`);
+            break
+        default: 
+            console.log('Enter a valid operator')
+    }
+}
+// calculator()
