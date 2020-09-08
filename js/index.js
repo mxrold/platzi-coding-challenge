@@ -77,9 +77,9 @@ const takeOutVowels = (str) => {
 
 // ------------------------------------------------------- Challenge #6 - Calculator
 const calculator = () => {
-    const number1 = parseFloat(prompt('Enter a number 1'));
+    const number1 = parseFloat(prompt('Enter a first number'));
     const operator = prompt('Enter a operator: "+", "-", "/", "*"');
-    const number2 = parseFloat(prompt('Enter a number 2'));
+    const number2 = parseFloat(prompt('Enter a second number'));
 
     switch(operator) {
         case '+': 
@@ -192,3 +192,21 @@ const secretNumber = () => {
     }
 }
 //secretNumber()
+
+
+
+// ------------------------------------------------------- Challenge #10 - Pig latin
+const pigLatin = () => {
+    let askWord = prompt('Enter a word and we translate it into Pig Latin 🐷!').toLowerCase();
+    let isVowel = askWord.charAt(0);
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    for (let eachVowel of vowels) {
+        if(eachVowel === isVowel) {
+            return (askWord + 'way');
+        } else {
+            return (askWord.slice(1) + askWord.charAt(0) + 'ay')
+        }
+    }
+}
+console.log(pigLatin());
