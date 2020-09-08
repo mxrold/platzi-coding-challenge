@@ -167,3 +167,28 @@ const volumeCylinder = () => {
     return result;
 }
 // console.log(volumeCylinder());
+
+
+
+// ------------------------------------------------------- Challenge #9 - Secret number
+const secretNumber = () => {
+    let numberRandom = (Math.random() * 10).toFixed(0);
+    let askUser = parseInt(prompt('Enter a number of the 1 to the 10'));
+    let count = 1;
+
+    while(numberRandom != askUser) {
+        askUser = parseInt(prompt('Enter a number of the 1 to the 10'));
+        count++;
+
+        if (askUser > numberRandom) {
+            console.log(`Your number is greater than the secret number`);
+        } 
+        else if (askUser < numberRandom) {
+            console.log(`Your number is less than the secret number`);
+        }
+        else {
+            console.log(`Great!!! You guessed the secret number is ${numberRandom} in ${count} tries`);
+        }
+    }
+}
+//secretNumber()
