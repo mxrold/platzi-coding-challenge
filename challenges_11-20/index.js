@@ -34,7 +34,29 @@ const generator = () => {
     }
     console.log(result);
 }
-// generator()
+ //generator()
+
+
+
+ //  ------------------------------------------------------- Challenge #12 - Next birthday
+const TODAY = new Date();
+const ONEDAY = 1000 * 60 * 60 * 24;
+
+const nextBirthday = (t, day) => {
+    let dayUser = parseInt(prompt('Enter your birthday'));
+    let monthUser = parseInt(prompt('Enter your birthday month')) - 1;
+
+    let birthday = new Date(t.getFullYear(), monthUser, dayUser);
+    let diff = Math.abs(t - birthday);
+    let result = Math.floor(diff / day);
+
+    if (birthday > t) {
+        return (result);
+    } else if (birthday < t) {
+        return Math.abs(result - 365);
+    }
+}
+// console.log(nextBirthday(TODAY, ONEDAY))
 
 
 
