@@ -60,3 +60,27 @@ const nextBirthday = (t, day) => {
 
 
 
+// ------------------------------------------------------- Challenge #13 - Tip calculator
+const tip = () => {
+    let saucer = parseFloat(prompt('Enter order value'));
+    let askNewSaucer = prompt('Do you want a new order? y/n').toLowerCase();
+
+    while(askNewSaucer === 'y') {
+        saucer += parseFloat(prompt('Enter a new order value'));
+        askNewSaucer = prompt('Do you want a new order? y/n').toLowerCase();
+        COUNT++;
+    }
+
+    let tip = parseFloat(prompt('What percentage of tip do you want to give? | Remember that it must be greater than 5%'));
+    if (tip < 5) {
+        alert('The tip have be that greater than 5%');
+    } else {
+        let tipResult = (saucer * tip) / 100
+        let result = (`Total order value: $${saucer} | Tip value: $${tipResult} | Total value: $${saucer + tipResult}`);
+        return(result);
+    }
+}
+// console.log(tip());
+
+
+
